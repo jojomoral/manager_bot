@@ -15,7 +15,7 @@ import traceback
 ###########################
 ####    ТОКЕН БОТА ########
 ###########################
-TOKEN = '1888300214:AAHANDYsJaZfVXKIH-Bnmx5382XqO88YYoE'
+TOKEN = ''
 
 sql_conn = sqlite3.connect('main.db', check_same_thread=False)
 sql_curs = sql_conn.cursor()
@@ -66,7 +66,7 @@ async def delete_time_dinner(interval=30):
         sql_conn.commit()
 
 
-class DB():
+class DB(object):
 
     def get_manager_message_id(id):
         sql = f'SELECT id_message FROM managers WHERE id = {id}'
